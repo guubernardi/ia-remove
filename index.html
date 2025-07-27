@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="midia/favicon.ico" type="image/x-icon" />
+  <title>IA Remove > Remover imagem</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="midia/ia remove logo.png" alt="Logo IA Remove" />
+      <span>IA <strong>Remove</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="https://www.linkedin.com/in/gubernardi/" target="_blank">Linkedin</a></li>
+      <li><a href="https://github.com/guubernardi" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Remova o fundo da sua imagem</h1>
+
+    <div class="left">
+      <label for="imageInput" class="btn btn-secondary">
+        📁 Escolher imagem
+      </label>
+      <input type="file" id="imageInput" accept="image/*" />
+      <span id="fileName">Nenhum arquivo selecionado</span>
+
+      <div id="previewContainer" style="display: none; position: relative;">
+        <img id="previewImage" src="" alt="Prévia da imagem" style="max-width: 100%; max-height: 250px; border-radius: 10px; margin-top: 20px;" />
+        <button id="removeImageBtn" title="Remover imagem selecionada"
+          style="position: absolute; top: 5px; right: 5px; background: red; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; font-weight: bold; cursor: pointer;">
+          ✕
+        </button>
+      </div>
+
+      <div id="dropZone" class="drop-zone">
+        <p>🧠 Arraste uma imagem aqui</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <button class="btn" onclick="removerfundo()">Remover Fundo</button>
+    </div>
+  </div>
+
+  <div id="loader" class="loader" style="display: none;"></div>
+
+  <div id="result" class="result">
+    <h2>✅ Imagem Processada</h2>
+    <div class="output-wrapper">
+      <img id="outputImage" src="" alt="Imagem Processada" />
+    </div>
+    <p>Clique no botão abaixo para baixar sua imagem:</p>
+    <a id="downloadBtn" href="#" download="sem-fundo.png" class="download-btn">⬇️ Baixar imagem</a>
+  </div>
+
+  <footer>
+    <p>
+      Desenvolvido por
+      <a href="https://github.com/guubernardi" target="_blank">Gustavo</a> 💻 | Projeto: Remove IA
+    </p>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Imagem carregada com sucesso!</div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
