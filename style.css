@@ -24,7 +24,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Removido justify-content e align-items para não centralizar tudo */
 }
 
 /* ============================ */
@@ -57,11 +56,9 @@ body {
     display: none;
 }
 
-/* ============================ */
-/* NAVEGAÇÃO           */
-/* ============================ */
+/* NAVEGAÇÃO*/
 .navbar {
-    width: 100%; /* Garante a largura total */
+    width: 100%; 
     background-color: #0D0D0D;
     color: white;
     padding: 15px 30px;
@@ -146,22 +143,13 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #FFFFFF;
-    
-    /* Centraliza horizontal e verticalmente na área disponível */
-    margin: auto; 
-    
-    /* Removido `overflow: hidden`, `max-height` e `min-height` para o conteúdo se adaptar */
+    margin: auto;
     position: relative;
     z-index: 1;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
-    
-    /* Removido estas propriedades, pois são para o conteúdo interno, não para o container */
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 .left, .right {
@@ -594,7 +582,7 @@ footer {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none; /* impede interação quando invisível */
-    visibility: hidden; /* impede que o elemento ocupe espaço quando invisível */
-    transition-delay: 0.5s; /* atraso para permitir que a transição de opacidade ocorra antes de esconder completamente */
+    pointer-events: none; 
+    visibility: hidden;
+    transition-delay: 0.5s; 
 }

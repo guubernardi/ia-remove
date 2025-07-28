@@ -118,7 +118,7 @@ function removerfundo() {
     fetch('https://api.remove.bg/v1.0/removebg', {
         method: 'POST',
         headers: {
-            'X-Api-Key': 'i8NM46tppdHdRgZwtxsSxGmF' // Sua chave de API aqui
+            'X-Api-Key': 'i8NM46tppdHdRgZwtxsSxGmF' // Chave API
         },
         body: formData
     })
