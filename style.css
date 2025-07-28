@@ -500,6 +500,33 @@ footer {
         display: block;
         margin-top: 10px;
     }
+
+    @media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1.1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 0.95em;
+    padding: 8px 12px;
+  }
+}
+
 }
 
 .drop-zone {
