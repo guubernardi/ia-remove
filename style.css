@@ -517,7 +517,6 @@ footer {
   }
 
   .nav-links {
-    flex-direction: column;
     gap: 10px;
   }
 
@@ -525,6 +524,15 @@ footer {
     font-size: 0.95em;
     padding: 8px 12px;
   }
+
+  .nav-links li {
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  align-items: center;
+}
+
 }
 
 }
